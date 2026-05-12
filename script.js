@@ -76,19 +76,19 @@
   /* ----------------------------------------------------------
      Scroll-reveal — animate elements into view
   ---------------------------------------------------------- */
-  const revealEls = document.querySelectorAll(
+  const revealEls = Array.from(document.querySelectorAll(
     '.skill-card, .project-card, .about__grid, .contact__form, .contact__intro'
-  );
+  ));
 
   if (revealEls.length && 'IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver(
       (entries, obs) => {
-        entries.forEach((entry, i) => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             // Stagger within the same parent
             const siblings = Array.from(
               entry.target.parentElement.children
-            ).filter(el => revealEls.includes ? Array.from(revealEls).includes(el) : true);
+            ).filter(el => revealEls.includes(el));
             const idx = siblings.indexOf(entry.target);
             entry.target.style.transitionDelay = `${idx * 60}ms`;
             entry.target.classList.add('visible');
