@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ashish Vail – Professional Web Developer specializing in custom tools, plugins, and high-quality websites." />
+  <title>Ashish Vail | Web Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container">
+      <a href="#hero" class="nav__logo">AV<span class="accent">.</span></a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero__content container">
+        <p class="hero__greeting fade-in">Hello, I&rsquo;m</p>
+        <h1 class="hero__name fade-in delay-1">Ashish Vail</h1>
+        <h2 class="hero__title fade-in delay-2">
+          Professional <span class="accent">Web Developer</span>
+        </h2>
+        <p class="hero__sub fade-in delay-3">
+          Specializing in <strong>custom tools</strong>, <strong>plugins</strong>, and
+          <strong>high-quality websites</strong> that drive real business results.
+        </p>
+        <div class="hero__actions fade-in delay-4">
+          <a href="#projects" class="btn btn--primary">View My Work</a>
+          <a href="#contact" class="btn btn--outline">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <h2 class="section__title">About Me</h2>
+        <div class="about__grid">
+          <div class="about__avatar" aria-hidden="true">
+            <div class="avatar-placeholder">AV</div>
+          </div>
+          <div class="about__text">
+            <p>
+              I&rsquo;m a passionate web developer with a focus on crafting solutions that are both
+              technically robust and visually compelling. From lightweight browser plugins to
+              full-featured web applications, I build software that people actually enjoy using.
+            </p>
+            <p>
+              My background spans front-end development, back-end architecture, and developer
+              tooling — giving me a holistic perspective that results in cleaner code, faster
+              delivery, and happier clients.
+            </p>
+            <a href="#contact" class="btn btn--primary">Work With Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <h2 class="section__title">Skills &amp; Expertise</h2>
+        <div class="skills__grid">
+
+          <div class="skill-card">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3>Front-End Development</h3>
+            <p>Pixel-perfect UIs with HTML5, CSS3, and modern JavaScript (ES2023+). React, Vue, and vanilla JS.</p>
+            <ul class="skill-card__tags">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>React</li><li>Vue</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h3>Back-End &amp; APIs</h3>
+            <p>Scalable server-side solutions with Node.js, Express, and RESTful or GraphQL APIs.</p>
+            <ul class="skill-card__tags">
+              <li>Node.js</li><li>Express</li><li>REST</li><li>GraphQL</li><li>MongoDB</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h3>Custom Tools &amp; Plugins</h3>
+            <p>Browser extensions, VS Code extensions, CLI utilities, and WordPress/CMS plugins tailored to your workflow.</p>
+            <ul class="skill-card__tags">
+              <li>Browser Ext.</li><li>VS Code Ext.</li><li>CLI Tools</li><li>WordPress</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h3>Performance &amp; SEO</h3>
+            <p>Core Web Vitals optimization, semantic markup, structured data, and Lighthouse scores that actually matter.</p>
+            <ul class="skill-card__tags">
+              <li>Core Web Vitals</li><li>SEO</li><li>Accessibility</li><li>Lighthouse</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <h3>DevOps &amp; CI/CD</h3>
+            <p>GitHub Actions, Docker, and cloud deployments on AWS, Vercel, and Netlify for seamless delivery pipelines.</p>
+            <ul class="skill-card__tags">
+              <li>GitHub Actions</li><li>Docker</li><li>AWS</li><li>Vercel</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              </svg>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>Wireframing, prototyping, and design systems that bridge the gap between aesthetics and usability.</p>
+            <ul class="skill-card__tags">
+              <li>Figma</li><li>Design Systems</li><li>Prototyping</li><li>WCAG</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <h2 class="section__title">Featured Projects</h2>
+        <div class="projects__grid">
+
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag">Plugin</span>
+              <div class="project-card__links" aria-label="Project links">
+                <a href="#" aria-label="View source" class="icon-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Live demo" class="icon-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">DevPalette – VS Code Extension</h3>
+            <p class="project-card__desc">
+              A VS Code extension that generates accessible color palettes from any seed color,
+              with live contrast-ratio checking and one-click CSS variable export.
+            </p>
+            <ul class="project-card__stack">
+              <li>TypeScript</li><li>VS Code API</li><li>WCAG</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag">Tool</span>
+              <div class="project-card__links" aria-label="Project links">
+                <a href="#" aria-label="View source" class="icon-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Live demo" class="icon-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">SnapBundle – CLI Asset Optimizer</h3>
+            <p class="project-card__desc">
+              A Node.js CLI that watches your project and automatically compresses images,
+              minifies CSS/JS, and generates WebP variants — cutting average page weight by 60 %.
+            </p>
+            <ul class="project-card__stack">
+              <li>Node.js</li><li>Sharp</li><li>Rollup</li><li>CLI</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag">Website</span>
+              <div class="project-card__links" aria-label="Project links">
+                <a href="#" aria-label="View source" class="icon-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Live demo" class="icon-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Lumina — SaaS Landing Page</h3>
+            <p class="project-card__desc">
+              A high-converting SaaS marketing site built with Next.js and Tailwind, achieving
+              a 98 Lighthouse performance score and a 30 % improvement in trial sign-ups.
+            </p>
+            <ul class="project-card__stack">
+              <li>Next.js</li><li>Tailwind</li><li>Vercel</li><li>SEO</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag">Plugin</span>
+              <div class="project-card__links" aria-label="Project links">
+                <a href="#" aria-label="View source" class="icon-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Live demo" class="icon-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">FocusFlow – Browser Extension</h3>
+            <p class="project-card__desc">
+              A Chrome/Firefox extension that tracks active-tab time, blocks distracting sites
+              on a schedule, and generates weekly productivity reports as downloadable PDFs.
+            </p>
+            <ul class="project-card__stack">
+              <li>JavaScript</li><li>WebExtensions API</li><li>IndexedDB</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag">Website</span>
+              <div class="project-card__links" aria-label="Project links">
+                <a href="#" aria-label="View source" class="icon-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Live demo" class="icon-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Craftwell – E-Commerce Store</h3>
+            <p class="project-card__desc">
+              A headless Shopify storefront with a custom React front-end, real-time inventory
+              sync, and a bespoke checkout flow that reduced cart abandonment by 22 %.
+            </p>
+            <ul class="project-card__stack">
+              <li>React</li><li>Shopify</li><li>GraphQL</li><li>Stripe</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__tag">Tool</span>
+              <div class="project-card__links" aria-label="Project links">
+                <a href="#" aria-label="View source" class="icon-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Live demo" class="icon-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Schematic – API Mock Generator</h3>
+            <p class="project-card__desc">
+              An open-source tool that reads an OpenAPI spec and spins up a fully typed mock
+              server in seconds, with configurable latency and error-injection scenarios.
+            </p>
+            <ul class="project-card__stack">
+              <li>Node.js</li><li>OpenAPI</li><li>TypeScript</li><li>Open Source</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <h2 class="section__title">Get In Touch</h2>
+        <p class="contact__intro">
+          Have a project in mind or need a custom solution? I&rsquo;d love to hear about it.
+          Drop me a message and I&rsquo;ll get back to you within 24 hours.
+        </p>
+        <form class="contact__form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required placeholder="Your name" />
+            <span class="form-error" id="name-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com" />
+            <span class="form-error" id="email-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project…"></textarea>
+            <span class="form-error" id="message-error" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <p class="form-success" id="form-success" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; <span id="footer-year"></span> Ashish Vail. All rights reserved.</p>
+      <nav class="footer__social" aria-label="Social links">
+        <a href="#" aria-label="GitHub" class="icon-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="LinkedIn" class="icon-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Twitter / X" class="icon-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
