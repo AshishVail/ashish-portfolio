@@ -12,145 +12,186 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; background: #ffffff; color: #1e293b; }
         .gradient-text { background: linear-gradient(90deg, #4f46e5, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero-pattern { background-image: radial-gradient(#e2e8f0 1px, transparent 1px); background-size: 30px 30px; }
-        .skill-card:hover { transform: translateY(-10px); background: #f8fafc; border-color: #4f46e5; }
+        .skill-card:hover { transform: translateY(-10px); background: #f8fafc; border-color: #4f46e5; box-shadow: 0 20px 40px -15px rgba(79, 70, 229, 0.1); }
         .nav-glass { backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.8); border-bottom: 1px solid #f1f5f9; }
         .animate-float { animation: float 6s ease-in-out infinite; }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
-        .section-padding { padding: 100px 20px; }
-        .social-btn { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 15px; transition: 0.3s; background: #f1f5f9; color: #1e293b; font-size: 1.2rem; }
-        .social-btn:hover { background: #4f46e5; color: white; transform: scale(1.1); }
+        .section-padding { padding: 120px 20px; }
+        .social-btn { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 12px; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); background: #f8fafc; border: 1px solid #e2e8f0; color: #1e293b; font-size: 1.1rem; }
+        .social-btn:hover { background: #4f46e5; color: white; transform: translateY(-5px); border-color: #4f46e5; }
+        .lang-badge { background: #f1f5f9; padding: 8px 16px; border-radius: 10px; font-size: 12px; font-weight: 700; color: #475569; border: 1px solid #e2e8f0; }
     </style>
 </head>
 <body>
 
-    <!-- 1. Navigation Header -->
-    <nav class="fixed w-full z-50 nav-glass py-4 px-6 md:px-12 flex justify-between items-center">
+    <!-- 1. NAVIGATION -->
+    <nav class="fixed w-full z-50 nav-glass py-5 px-6 md:px-12 flex justify-between items-center">
         <div class="text-2xl font-extrabold tracking-tighter italic">ASHISH<span class="text-indigo-600">.</span></div>
-        <div class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest text-gray-500">
-            <a href="#about" class="hover:text-indigo-600 transition">About</a>
-            <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
-            <a href="#portfolio" class="hover:text-indigo-600 transition">Portfolio</a>
-            <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+        <div class="hidden lg:flex space-x-10 text-[11px] font-black uppercase tracking-[0.2em] text-gray-400">
+            <a href="#about" class="hover:text-indigo-600 transition">Identity</a>
+            <a href="#skills" class="hover:text-indigo-600 transition">Languages</a>
+            <a href="#services" class="hover:text-indigo-600 transition">Solutions</a>
+            <a href="#portfolio" class="hover:text-indigo-600 transition">Works</a>
         </div>
         <div class="flex space-x-3">
              <a href="https://github.com/ashishvail" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
              <a href="https://x.com/ashishvail" target="_blank" class="social-btn"><i class="fab fa-x-twitter"></i></a>
+             <a href="https://linkedin.com/in/ashish-kumar84" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
         </div>
     </nav>
 
-    <!-- 2. Hero Section -->
-    <section id="about" class="hero-pattern section-padding min-h-screen flex flex-col justify-center items-center text-center px-6">
-        <div class="animate-float mb-8 bg-indigo-600 text-white px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.2em]">
-            Expert in Web Automation & Logic
+    <!-- 2. HERO SECTION -->
+    <section class="hero-pattern section-padding min-h-[90vh] flex flex-col justify-center items-center text-center px-6">
+        <div class="animate-float mb-10 bg-indigo-50 text-indigo-600 px-8 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.3em] border border-indigo-100">
+            Available for New Projects 2026
         </div>
-        <h1 class="text-5xl md:text-[90px] font-black tracking-tighter leading-none mb-8">
-            High Quality <br> <span class="gradient-text italic">Web Developer</span>
+        <h1 class="text-5xl md:text-[110px] font-black tracking-tighter leading-[0.9] mb-10">
+            Digital Architect <br> <span class="gradient-text italic">& Logic Master.</span>
         </h1>
-        <p class="max-w-2xl text-xl text-gray-400 leading-relaxed mb-12 font-medium">
-            Building modern, scalable, and responsive web applications with passion and precision. Specialized in SEO and AI Automation.
+        <p class="max-w-3xl text-xl text-gray-400 leading-relaxed mb-14 font-medium">
+            Engineering high-fidelity web experiences and autonomous systems. I blend aesthetic design with robust backend logic to solve complex problems.
         </p>
-        
-        <!-- Action Buttons -->
-        <div class="flex flex-wrap justify-center gap-6 mb-12">
-            <a href="#portfolio" class="bg-indigo-600 text-white px-10 py-5 rounded-2xl font-bold shadow-2xl shadow-indigo-200 hover:scale-105 transition-all">My Work 📂</a>
-            <a href="#contact" class="bg-white border-2 border-slate-100 px-10 py-5 rounded-2xl font-bold hover:bg-slate-50 transition-all">Get in Touch ✉️</a>
-        </div>
-
-        <!-- Social Media Icon Buttons -->
-        <div class="flex gap-4">
-            <a href="https://linkedin.com" target="_blank" class="social-btn shadow-sm"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://instagram.com" target="_blank" class="social-btn shadow-sm"><i class="fab fa-instagram"></i></a>
-            <a href="https://youtube.com" target="_blank" class="social-btn shadow-sm"><i class="fab fa-youtube"></i></a>
-            <a href="https://facebook.com" target="_blank" class="social-btn shadow-sm"><i class="fab fa-facebook-f"></i></a>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="#portfolio" class="bg-indigo-600 text-white px-12 py-5 rounded-2xl font-bold shadow-xl shadow-indigo-100 hover:bg-indigo-700 transition-all">Explore Works 📂</a>
+            <a href="mailto:contact@ashishvail.com" class="bg-white border-2 border-slate-100 px-12 py-5 rounded-2xl font-bold hover:bg-slate-50 transition-all">Consultation ✉️</a>
         </div>
     </section>
 
-    <!-- 3. Skills Section -->
+    <!-- 3. ABOUT SECTION (NEW) -->
+    <section id="about" class="section-padding bg-white border-y border-slate-50">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 items-center">
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-indigo-50 rounded-full blur-3xl opacity-60"></div>
+                <img src="1000097975.jpg" alt="Ashish" class="relative z-10 w-full rounded-[40px] shadow-2xl grayscale hover:grayscale-0 transition duration-700">
+            </div>
+            <div>
+                <h2 class="text-xs font-black uppercase tracking-[0.4em] text-indigo-600 mb-6">About Me</h2>
+                <h3 class="text-5xl font-black mb-8 leading-tight">Driven by Logic, <br> Defined by Code.</h3>
+                <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                    I am Ashish, a multi-skilled digital professional specializing in Web Development and AI Automation. My journey is built on the foundation of turning complex ideas into scalable, efficient digital solutions. 
+                </p>
+                <p class="text-gray-500 text-lg leading-relaxed mb-10">
+                    With a deep understanding of SEO and content growth, I don't just build websites; I build platforms that rank and perform.
+                </p>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-3xl font-black text-indigo-600">50+</h4>
+                        <p class="text-xs font-bold uppercase tracking-widest text-slate-400">Projects Launched</p>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-black text-indigo-600">2026</h4>
+                        <p class="text-xs font-bold uppercase tracking-widest text-slate-400">Active Era</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. LANGUAGES & TECH STACK (EXPANDED) -->
     <section id="skills" class="bg-slate-50 section-padding">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-xs font-black uppercase tracking-[0.3em] text-indigo-600 mb-4">Expertise</h2>
-                <h3 class="text-4xl font-black text-slate-900">Technical Mastery</h3>
+            <div class="text-center mb-20">
+                <h2 class="text-xs font-black uppercase tracking-[0.4em] text-indigo-600 mb-4">The Stack</h2>
+                <h3 class="text-4xl font-black text-slate-900 leading-tight">Languages & Technologies</h3>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="skill-card bg-white p-8 rounded-[32px] border border-slate-100 transition-all text-center">
-                    <div class="text-3xl mb-4 text-indigo-600"><i class="fas fa-code"></i></div>
-                    <h4 class="font-bold text-lg mb-2">Development</h4>
-                    <p class="text-xs text-gray-400">Next.js, React, Tailwind</p>
+            
+            <!-- Programming Languages Cloud -->
+            <div class="flex flex-wrap justify-center gap-4 mb-24 max-w-4xl mx-auto">
+                <span class="lang-badge">HTML5</span>
+                <span class="lang-badge">CSS3</span>
+                <span class="lang-badge">JAVASCRIPT</span>
+                <span class="lang-badge">NODE.JS</span>
+                <span class="lang-badge">PYTHON</span>
+                <span class="lang-badge">REACT.JS</span>
+                <span class="lang-badge">NEXT.JS</span>
+                <span class="lang-badge">TAILWIND CSS</span>
+                <span class="lang-badge">SQL</span>
+                <span class="lang-badge">MONGODB</span>
+                <span class="lang-badge">GIT / GITHUB</span>
+                <span class="lang-badge">PHP</span>
+                <span class="lang-badge">SELENIUM</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="skill-card bg-white p-10 rounded-[35px] border border-slate-100 transition-all">
+                    <div class="text-4xl mb-6"><i class="fas fa-layer-group text-indigo-600"></i></div>
+                    <h4 class="font-black text-xl mb-4">Frontend Mastery</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Building pixel-perfect, responsive interfaces using modern frameworks and advanced styling techniques.</p>
                 </div>
-                <div class="skill-card bg-white p-8 rounded-[32px] border border-slate-100 transition-all text-center">
-                    <div class="text-3xl mb-4 text-sky-500"><i class="fas fa-robot"></i></div>
-                    <h4 class="font-bold text-lg mb-2">Automation</h4>
-                    <p class="text-xs text-gray-400">Python & AI Scripts</p>
+                <div class="skill-card bg-white p-10 rounded-[35px] border border-slate-100 transition-all">
+                    <div class="text-4xl mb-6"><i class="fas fa-terminal text-sky-500"></i></div>
+                    <h4 class="font-black text-xl mb-4">Backend & API</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Developing robust server-side logic and secure database architectures to handle complex data flows.</p>
                 </div>
-                <div class="skill-card bg-white p-8 rounded-[32px] border border-slate-100 transition-all text-center">
-                    <div class="text-3xl mb-4 text-orange-500"><i class="fas fa-search"></i></div>
-                    <h4 class="font-bold text-lg mb-2">SEO</h4>
-                    <p class="text-xs text-gray-400">Google Ranking Expert</p>
-                </div>
-                <div class="skill-card bg-white p-8 rounded-[32px] border border-slate-100 transition-all text-center">
-                    <div class="text-3xl mb-4 text-pink-500"><i class="fas fa-paint-brush"></i></div>
-                    <h4 class="font-bold text-lg mb-2">Design</h4>
-                    <p class="text-xs text-gray-400">UI/UX & Graphics</p>
+                <div class="skill-card bg-white p-10 rounded-[35px] border border-slate-100 transition-all">
+                    <div class="text-4xl mb-6"><i class="fas fa-microchip text-orange-500"></i></div>
+                    <h4 class="font-black text-xl mb-4">AI Automation</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Integrating AI models and writing Python scripts to automate repetitive tasks and enhance productivity.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Portfolio Section (Updated) -->
+    <!-- 5. PORTFOLIO -->
     <section id="portfolio" class="section-padding bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <h3 class="text-xs font-black uppercase tracking-[0.3em] text-indigo-600 text-center mb-4">My Portfolio</h3>
-            <h4 class="text-4xl font-black text-center mb-16 text-slate-900">Featured Projects</h4>
+            <h3 class="text-xs font-black uppercase tracking-[0.4em] text-indigo-600 text-center mb-4">Portfolio</h3>
+            <h4 class="text-5xl font-black text-center mb-24 text-slate-900">Featured Infrastructure</h4>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1: Nexovent -->
-                <div class="group bg-slate-50 rounded-[40px] p-8 border border-slate-100 hover:bg-indigo-600 transition-all duration-500">
-                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-                        <i class="fas fa-globe text-2xl text-indigo-600"></i>
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Project Card -->
+                <div class="group relative">
+                    <div class="bg-slate-900 aspect-video rounded-[45px] overflow-hidden mb-8 flex items-center justify-center">
+                        <span class="text-slate-700 font-black text-6xl group-hover:scale-110 transition duration-700">NEXOVENT</span>
                     </div>
-                    <h5 class="text-2xl font-black mb-4 group-hover:text-white">Nexovent Tech</h5>
-                    <p class="text-gray-500 text-sm mb-8 leading-relaxed group-hover:text-indigo-100">Professional web architecture for digital growth and monetization.</p>
-                    <a href="https://nexovent.tech/" target="_blank" class="inline-block font-black text-xs uppercase tracking-widest text-indigo-600 group-hover:text-white border-b-2 border-transparent group-hover:border-white">Visit Site ↗</a>
+                    <div class="px-4">
+                        <h5 class="text-3xl font-black mb-4">Nexovent Tech</h5>
+                        <p class="text-gray-500 text-lg mb-8 leading-relaxed">A high-performance hub for web development tools, SEO automation, and digital asset management.</p>
+                        <a href="https://nexovent.tech/" target="_blank" class="inline-flex items-center font-black text-xs uppercase tracking-widest text-indigo-600 border-b-2 border-indigo-100 pb-2 hover:border-indigo-600 transition">Visit Platform <i class="fas fa-arrow-right ml-2 text-[10px]"></i></a>
+                    </div>
                 </div>
 
-                <!-- Project 2: Instagram AI -->
-                <div class="group bg-slate-50 rounded-[40px] p-8 border border-slate-100 hover:bg-indigo-600 transition-all duration-500">
-                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-                        <i class="fab fa-instagram text-2xl text-pink-500"></i>
+                <!-- Project Card 2 -->
+                <div class="group relative">
+                    <div class="bg-indigo-600 aspect-video rounded-[45px] overflow-hidden mb-8 flex items-center justify-center">
+                        <span class="text-indigo-400 font-black text-6xl group-hover:scale-110 transition duration-700 italic">AI STUDIO</span>
                     </div>
-                    <h5 class="text-2xl font-black mb-4 group-hover:text-white">Caption AI</h5>
-                    <p class="text-gray-500 text-sm mb-8 leading-relaxed group-hover:text-indigo-100">AI-powered social media content and engagement generator.</p>
-                    <a href="https://nexovent.tech/tools/instagram-caption-generator" target="_blank" class="inline-block font-black text-xs uppercase tracking-widest text-indigo-600 group-hover:text-white">Open Tool ↗</a>
-                </div>
-
-                <!-- Project 3: AI Prompt Studio -->
-                <div class="group bg-slate-50 rounded-[40px] p-8 border border-slate-100 hover:bg-indigo-600 transition-all duration-500">
-                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-                        <i class="fas fa-brain text-2xl text-sky-500"></i>
+                    <div class="px-4">
+                        <h5 class="text-3xl font-black mb-4">Prompt Studio AI</h5>
+                        <p class="text-gray-500 text-lg mb-8 leading-relaxed">A specialized automation engine built to generate high-fidelity prompts for modern AI models.</p>
+                        <a href="https://nexovent.tech/ai-studio" target="_blank" class="inline-flex items-center font-black text-xs uppercase tracking-widest text-indigo-600 border-b-2 border-indigo-100 pb-2 hover:border-indigo-600 transition">Open Architecture <i class="fas fa-arrow-right ml-2 text-[10px]"></i></a>
                     </div>
-                    <h5 class="text-2xl font-black mb-4 group-hover:text-white">Prompt Studio</h5>
-                    <p class="text-gray-500 text-sm mb-8 leading-relaxed group-hover:text-indigo-100">Precision engine for creating high-fidelity AI prompts.</p>
-                    <a href="https://nexovent.tech/ai-studio" target="_blank" class="inline-block font-black text-xs uppercase tracking-widest text-indigo-600 group-hover:text-white">Open Tool ↗</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. Footer & Contact -->
-    <footer id="contact" class="bg-slate-900 py-20 px-6 text-white text-center">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-black mb-6 italic uppercase">ASHISH<span class="text-indigo-400">.</span></h2>
-            <p class="text-slate-400 mb-10">Let's build something extraordinary together. Reach out via social media or email.</p>
-            
-            <div class="flex justify-center gap-4 mb-12">
-                <a href="https://github.com/ashishvail" target="_blank" class="social-btn bg-slate-800 text-white hover:bg-white hover:text-slate-900"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/ashishvail" target="_blank" class="social-btn bg-slate-800 text-white hover:bg-white hover:text-slate-900"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://linkedin.com" target="_blank" class="social-btn bg-slate-800 text-white hover:bg-white hover:text-slate-900"><i class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:contact@ashishvail.com" class="social-btn bg-slate-800 text-white hover:bg-white hover:text-slate-900"><i class="fas fa-envelope"></i></a>
+    <!-- 6. FOOTER -->
+    <footer id="contact" class="bg-white pt-40 pb-12 px-6 border-t border-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-20 mb-32">
+                <div class="max-w-md">
+                    <div class="text-4xl font-black mb-10 italic tracking-tighter">ASHISH<span class="text-indigo-600">.</span></div>
+                    <p class="text-gray-400 font-medium leading-relaxed mb-12 text-lg">Independent Digital Architect based in India. Designing the future through logic-driven code.</p>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/ashishvail" target="_blank" class="social-btn shadow-sm"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/ashishvail" target="_blank" class="social-btn shadow-sm"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://linkedin.com/in/ashish-kumar84" target="_blank" class="social-btn shadow-sm"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-auto">
+                    <h5 class="font-black uppercase text-[10px] tracking-[0.4em] text-slate-300 mb-10">Quick Connect</h5>
+                    <a href="mailto:contact@ashishvail.com" class="text-3xl md:text-5xl font-black border-b-4 border-slate-900 pb-4 hover:text-indigo-600 hover:border-indigo-600 transition duration-500">contact@ashishvail.com</a>
+                </div>
             </div>
-            
-            <p class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.4em]">© 2026 Ashish. All rights reserved.</p>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-slate-50">
+                <p class="text-[10px] text-slate-300 font-black uppercase tracking-[0.5em]">© 2026 ASHISH ARCHITECTURE</p>
+                <div class="flex gap-10 text-[9px] font-black uppercase tracking-[0.3em] text-slate-300">
+                    <span>Performance</span>
+                    <span>Scalability</span>
+                    <span>Precision</span>
+                </div>
+            </div>
         </div>
     </footer>
 
