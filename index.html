@@ -3,93 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASHISH | Full Stack Web Developer & Automation Expert</title>
+    <title>ASHISH | Full-Stack Architect & Automation Master</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #000; overflow-x: hidden; }
-        .marquee { animation: marquee 20s linear infinite; }
-        @keyframes marquee { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
-        .card-shadow { transition: all 0.5s ease; border: 1px solid #e5e5e5; }
-        .card-shadow:hover { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1); border-color: #000; }
-        .hero-line { height: 2px; background: #000; width: 100px; margin-bottom: 20px; }
+        :root { --primary: #4f46e5; --secondary: #0ea5e9; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #ffffff; color: #1e293b; }
+        .gradient-text { background: linear-gradient(90deg, #4f46e5, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-pattern { background-image: radial-gradient(#e2e8f0 1px, transparent 1px); background-size: 30px 30px; }
+        .skill-card:hover { transform: translateY(-10px); background: #f8fafc; border-color: #4f46e5; }
+        .nav-glass { backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.8); border-bottom: 1px solid #f1f5f9; }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        .section-padding { padding: 100px 20px; }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 py-6 px-10 flex justify-between items-center">
-        <div class="text-3xl font-black uppercase tracking-tighter">Ashish</div>
-        <div class="space-x-8 text-xs font-bold uppercase tracking-widest hidden md:flex">
-            <a href="#hero" class="hover:text-blue-600">Home</a>
-            <a href="#websites" class="hover:text-blue-600">Websites</a>
-            <a href="#tools" class="hover:text-blue-600">Tools</a>
-            <a href="#contact" class="hover:text-blue-600">Contact</a>
+    <!-- 1. Navigation Header -->
+    <nav class="fixed w-full z-50 nav-glass py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="text-2xl font-extrabold tracking-tighter italic">ASHISH<span class="text-indigo-600">.</span></div>
+        <div class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest">
+            <a href="#about" class="hover:text-indigo-600 transition">About</a>
+            <a href="#skills" class="hover:text-indigo-600 transition">Expertise</a>
+            <a href="#portfolio" class="hover:text-indigo-600 transition">Portfolio</a>
+            <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+        </div>
+        <div class="flex space-x-4">
+            <a href="https://x.com/ashishvail" target="_blank" class="p-2 hover:bg-gray-100 rounded-full transition">𝕏</a>
+            <a href="https://github.com/ashishvail" target="_blank" class="p-2 hover:bg-gray-100 rounded-full transition">GitHub</a>
         </div>
     </nav>
 
-    <!-- Marquee Section -->
-    <div class="py-3 bg-black text-white overflow-hidden text-xs font-bold uppercase tracking-[0.3em]">
-        <div class="marquee whitespace-nowrap">
-            Full Stack Developer // Automation Expert // Web Architect // System Designer // Cloud Solutions // API Integration // Performance Optimization // Custom Plugins
+    <!-- 2. Hero & About Section -->
+    <section id="about" class="hero-pattern section-padding min-h-screen flex flex-col justify-center items-center text-center">
+        <div class="animate-float mb-8 bg-indigo-600 text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest">
+            Expert in Web Automation
         </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section id="hero" class="py-32 px-10 max-w-7xl mx-auto">
-        <div class="hero-line"></div>
-        <h1 class="text-[120px] font-black leading-[0.9] tracking-tighter mb-10">BUILDING <br> DIGITAL <br> EXCELLENCE.</h1>
-        <p class="text-2xl text-gray-500 max-w-xl">I craft high-performance digital experiences, custom web tools, and professional plugins with pixel-perfect precision.</p>
+        <h1 class="text-6xl md:text-8xl font-black tracking-tight mb-6">
+            Building The <span class="gradient-text">Autonomous</span> <br> Digital World.
+        </h1>
+        <p class="max-w-2xl text-xl text-gray-500 leading-relaxed mb-10">
+            Hi, I'm <strong>Ashish</strong>. A Full-Stack Web Developer and Automation Expert. I specialize in turning complex logic into seamless digital experiences through code that scales.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="#portfolio" class="bg-indigo-600 text-white px-10 py-4 rounded-xl font-bold shadow-lg shadow-indigo-200 hover:bg-indigo-700 transition">View My Work</a>
+            <a href="#contact" class="border-2 border-gray-200 px-10 py-4 rounded-xl font-bold hover:bg-gray-50 transition">Let's Talk</a>
+        </div>
     </section>
 
-    <!-- Websites Section -->
-    <section id="websites" class="py-32 bg-gray-50 px-10">
+    <!-- 3. Skills & Languages Section -->
+    <section id="skills" class="bg-slate-50 section-padding">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-sm font-bold uppercase tracking-[0.5em] text-gray-400 mb-16">Selected Web Projects</h2>
-            <div class="card-shadow p-16 bg-white rounded-3xl">
-                <h3 class="text-6xl font-black mb-8">Nexovent Tech</h3>
-                <p class="text-xl text-gray-600 mb-12 max-w-2xl">A professional-grade web architecture designed for scalability and high-traffic performance. This is the cornerstone of my development portfolio.</p>
-                <a href="https://nexovent.tech/" target="_blank" class="inline-block bg-black text-white px-10 py-5 font-bold uppercase tracking-widest hover:bg-blue-600 transition">Visit Masterpiece</a>
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black mb-4">Core Expertise</h2>
+                <p class="text-gray-500">The technology stack I use to bring ideas to life.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="skill-card bg-white p-10 rounded-3xl border border-gray-100 text-center transition-all">
+                    <div class="text-4xl mb-4">🌐</div>
+                    <h3 class="font-bold text-lg mb-2">HTML/CSS</h3>
+                    <p class="text-xs text-gray-400">Pixel Perfect Design</p>
+                </div>
+                <div class="skill-card bg-white p-10 rounded-3xl border border-gray-100 text-center transition-all">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="font-bold text-lg mb-2">JavaScript</h3>
+                    <p class="text-xs text-gray-400">Dynamic Interactions</p>
+                </div>
+                <div class="skill-card bg-white p-10 rounded-3xl border border-gray-100 text-center transition-all">
+                    <div class="text-4xl mb-4">🐍</div>
+                    <h3 class="font-bold text-lg mb-2">Python</h3>
+                    <p class="text-xs text-gray-400">Automation & Logic</p>
+                </div>
+                <div class="skill-card bg-white p-10 rounded-3xl border border-gray-100 text-center transition-all">
+                    <div class="text-4xl mb-4">🛠️</div>
+                    <h3 class="font-bold text-lg mb-2">WordPress</h3>
+                    <p class="text-xs text-gray-400">Scalable Solutions</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Tools Section -->
-    <section id="tools" class="py-32 px-10">
+    <!-- 4. Portfolio Section (Websites & Tools) -->
+    <section id="portfolio" class="section-padding">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-sm font-bold uppercase tracking-[0.5em] text-gray-400 mb-16">Specialized Tool-Kit</h2>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="card-shadow p-12 rounded-3xl">
-                    <h4 class="text-4xl font-bold mb-6">Instagram Caption Generator</h4>
-                    <p class="text-gray-500 mb-8">High-engagement social media content generation tool.</p>
-                    <a href="https://nexovent.tech/tools/instagram-caption-generator" target="_blank" class="font-bold border-b-2 border-black hover:text-blue-600 hover:border-blue-600">Explore Tool →</a>
-                </div>
-                <div class="card-shadow p-12 rounded-3xl">
-                    <h4 class="text-4xl font-bold mb-6">AI Prompt Studio</h4>
-                    <p class="text-gray-500 mb-8">Professional grade AI prompting engine for creative workflows.</p>
-                    <a href="https://nexovent.tech/ai-studio" target="_blank" class="font-bold border-b-2 border-black hover:text-blue-600 hover:border-blue-600">Explore Tool →</a>
+            
+            <!-- Category: Websites -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-black mb-10 flex items-center">
+                    <span class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mr-4">💻</span>
+                    Premium Websites
+                </h3>
+                <div class="grid md:grid-cols-1 gap-10">
+                    <div class="group relative overflow-hidden rounded-3xl bg-slate-900 aspect-video md:aspect-[21/9]">
+                        <div class="absolute inset-0 bg-gradient-to-r from-indigo-900 to-transparent opacity-80"></div>
+                        <div class="absolute bottom-10 left-10 text-white">
+                            <h4 class="text-5xl font-black mb-4">Nexovent Tech</h4>
+                            <p class="text-gray-300 max-w-lg mb-6 text-lg">Our flagship platform designed for digital growth and automation management. High performance meets aesthetic design.</p>
+                            <a href="https://nexovent.tech/" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full font-bold hover:scale-110 transition">Visit Website</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer / Contacts -->
-    <footer id="contact" class="py-32 px-10 bg-black text-white">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-20">
+            <!-- Category: Tools -->
             <div>
-                <h3 class="text-5xl font-black mb-10">Let's Talk.</h3>
-                <p class="text-gray-400">Ready to build your next big project? Reach out to me on social media or check my code repositories.</p>
+                <h3 class="text-3xl font-black mb-10 flex items-center">
+                    <span class="w-10 h-10 bg-sky-100 text-sky-600 rounded-lg flex items-center justify-center mr-4">⚙️</span>
+                    Automation Tools
+                </h3>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="p-10 rounded-3xl bg-white border border-gray-200 hover:border-sky-500 transition shadow-sm">
+                        <h4 class="text-2xl font-black mb-4">Instagram Caption AI</h4>
+                        <p class="text-gray-500 mb-8 leading-relaxed">A specialized tool using smart logic to generate viral social media content for creators and brands.</p>
+                        <a href="https://nexovent.tech/tools/instagram-caption-generator" target="_blank" class="text-sky-600 font-extrabold hover:underline">Launch Tool →</a>
+                    </div>
+                    <div class="p-10 rounded-3xl bg-white border border-gray-200 hover:border-indigo-500 transition shadow-sm">
+                        <h4 class="text-2xl font-black mb-4">AI Prompt Studio</h4>
+                        <p class="text-gray-500 mb-8 leading-relaxed">Precision engineering for AI prompts. Get high-fidelity results from any Generative AI model.</p>
+                        <a href="https://nexovent.tech/ai-studio" target="_blank" class="text-indigo-600 font-extrabold hover:underline">Launch Tool →</a>
+                    </div>
+                </div>
             </div>
-            <div class="space-y-6 text-sm font-bold uppercase tracking-widest">
-                <a href="https://x.com/ashishvail" class="block hover:text-blue-400">Twitter (X)</a>
-                <a href="https://www.linkedin.com/in/ashish-kumar84" class="block hover:text-blue-400">LinkedIn</a>
-                <a href="https://github.com/ashishvail" class="block hover:text-blue-400">GitHub Profile</a>
-                <a href="https://github.com/ashishvail/ashish-portfolio" class="block hover:text-blue-400">About this Repository</a>
+
+        </div>
+    </section>
+
+    <!-- 5. Interactive Section (Call to Action) -->
+    <section class="bg-indigo-600 py-24 text-center text-white px-6">
+        <h2 class="text-4xl md:text-6xl font-black mb-8">Have a tool idea in mind?</h2>
+        <p class="text-indigo-100 text-xl mb-12 max-w-2xl mx-auto">I can build custom plugins, complex web applications, and automated workflows from scratch.</p>
+        <a href="mailto:your-email@example.com" class="bg-white text-indigo-600 px-12 py-5 rounded-2xl font-black text-lg hover:shadow-2xl transition">Start Project</a>
+    </section>
+
+    <!-- 6. Professional Footer -->
+    <footer id="contact" class="bg-white pt-32 pb-10 px-6 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-2">
+                    <div class="text-3xl font-black mb-6">ASHISH.</div>
+                    <p class="text-gray-500 max-w-xs">An independent developer focused on the intersection of design and automation.</p>
+                </div>
+                <div>
+                    <h5 class="font-black uppercase text-xs tracking-widest mb-6">Socials</h5>
+                    <ul class="space-y-4 text-sm font-bold text-gray-400">
+                        <li><a href="https://x.com/ashishvail" target="_blank" class="hover:text-indigo-600 transition">Twitter / 𝕏</a></li>
+                        <li><a href="https://www.linkedin.com/in/ashish-kumar84" target="_blank" class="hover:text-indigo-600 transition">LinkedIn</a></li>
+                        <li><a href="https://github.com/ashishvail" target="_blank" class="hover:text-indigo-600 transition">GitHub</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-black uppercase text-xs tracking-widest mb-6">Project Links</h5>
+                    <ul class="space-y-4 text-sm font-bold text-gray-400">
+                        <li><a href="https://github.com/ashishvail/ashish-portfolio" class="hover:text-indigo-600 transition">Portfolio Source</a></li>
+                        <li><a href="https://nexovent.tech/" class="hover:text-indigo-600 transition">Nexovent Tech</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="text-gray-500 text-xs">
-                © 2026 ASHISH. <br>
-                DESIGNED FOR EXCELLENCE. <br>
-                ALL RIGHTS RESERVED.
+            <div class="pt-10 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">© 2026 ASHISH - HANDCRAFTED WITH PRECISION</p>
+                <div class="flex space-x-6 text-[10px] font-black text-gray-300 uppercase tracking-tighter">
+                    <span>Clean Design</span>
+                    <span>High Performance</span>
+                    <span>Scalable Code</span>
+                </div>
             </div>
         </div>
     </footer>
