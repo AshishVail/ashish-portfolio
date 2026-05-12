@@ -1,121 +1,98 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-white">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ASHISH • Full Stack Web Developer & Automation Expert</title>
-  <!-- Inter Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
-  <!-- Tailwind via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html { font-family: 'Inter', sans-serif; }
-    /* Fast, infinite marquee */
-    .marquee {
-      overflow: hidden;
-      white-space: nowrap;
-      mask-image: linear-gradient(to right, transparent 0, #fff 8%, #fff 92%, transparent 100%);
-    }
-    .marquee-track {
-      display: inline-block;
-      white-space: nowrap;
-      will-change: transform;
-      animation: marquee 8s linear infinite;
-    }
-    @keyframes marquee {
-      0%   { transform: translate3d(0,0,0); }
-      100% { transform: translate3d(-50%,0,0); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASHISH | Full Stack Web Developer & Automation Expert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #000; overflow-x: hidden; }
+        .marquee { animation: marquee 20s linear infinite; }
+        @keyframes marquee { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
+        .card-shadow { transition: all 0.5s ease; border: 1px solid #e5e5e5; }
+        .card-shadow:hover { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1); border-color: #000; }
+        .hero-line { height: 2px; background: #000; width: 100px; margin-bottom: 20px; }
+    </style>
 </head>
-<body class="bg-white min-h-screen text-black flex flex-col">
-  <!-- Navigation -->
-  <nav class="w-full flex items-center justify-between px-6 py-4 border-b border-black/10 text-base uppercase tracking-widest bg-white fixed top-0 left-0 z-40 h-16">
-    <a href="#" class="text-3xl font-black">ASHISH</a>
-    <div class="hidden md:flex gap-10 font-semibold">
-      <a href="#masterpiece" class="hover:opacity-75 transition">Masterpiece</a>
-      <a href="#toolkit" class="hover:opacity-75 transition">Tool-Kit</a>
-      <a href="#contact" class="hover:opacity-75 transition">Connectivity</a>
-    </div>
-  </nav>
+<body>
 
-  <!-- Spacer for fixed navbar -->
-  <div class="h-16"></div>
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 py-6 px-10 flex justify-between items-center">
+        <div class="text-3xl font-black uppercase tracking-tighter">Ashish</div>
+        <div class="space-x-8 text-xs font-bold uppercase tracking-widest hidden md:flex">
+            <a href="#hero" class="hover:text-blue-600">Home</a>
+            <a href="#websites" class="hover:text-blue-600">Websites</a>
+            <a href="#tools" class="hover:text-blue-600">Tools</a>
+            <a href="#contact" class="hover:text-blue-600">Contact</a>
+        </div>
+    </nav>
 
-  <!-- Hero Section -->
-  <header class="px-6 pt-14 pb-10 md:pb-20 w-full relative">
-    <!-- Marquee -->
-    <div aria-hidden="true" class="marquee mb-5 select-none pointer-events-none" style="height:48px;">
-      <div class="marquee-track text-3xl md:text-4xl font-extrabold tracking-tight">
-        <span>
-          FULL STACK DEVELOPER // AUTOMATION EXPERT // WEB ARCHITECT // UI/UX DESIGNER &nbsp;&nbsp;
-        </span>
-        <span>
-          FULL STACK DEVELOPER // AUTOMATION EXPERT // WEB ARCHITECT // UI/UX DESIGNER &nbsp;&nbsp;
-        </span>
-      </div>
+    <!-- Marquee Section -->
+    <div class="py-3 bg-black text-white overflow-hidden text-xs font-bold uppercase tracking-[0.3em]">
+        <div class="marquee whitespace-nowrap">
+            Full Stack Developer // Automation Expert // Web Architect // System Designer // Cloud Solutions // API Integration // Performance Optimization // Custom Plugins
+        </div>
     </div>
-    <h1 class="text-5xl md:text-7xl leading-tight font-black max-w-4xl mb-6">
-      Building <span class="underline decoration-2 decoration-black">Digital Futures</span><br>
-      With Precision & Innovation
-    </h1>
-    <p class="text-xl md:text-2xl font-medium text-black/80 max-w-2xl">
-      Specialized in high-performance web architectures, smart automation, and design-driven digital experiences.
-    </p>
-  </header>
 
-  <!-- Masterpiece Websites -->
-  <section id="masterpiece" class="px-6 py-12 md:py-16 bg-white w-full">
-    <h2 class="text-4xl md:text-5xl font-extrabold mb-10">Masterpiece Websites</h2>
-    <div class="grid gap-8 md:grid-cols-2">
-      <!-- Nexovent Tech -->
-      <a href="https://nexovent.tech/" target="_blank" rel="noopener" class="group block rounded-2xl border border-black/10 p-8 transition  hover:scale-[1.024] hover:shadow-2xl hover:border-black/30 bg-white cursor-pointer">
-        <h3 class="text-2xl font-extrabold mb-2 group-hover:underline">Nexovent Tech</h3>
-        <p class="text-black/70 mb-3">A next-generation enterprise tech portal built with a composable microservices architecture, advanced API orchestration, <span class="whitespace-nowrap">serverless</span> deployment, and automated CI/CD. Designed for maximum scalability, performance, and user-centricity.</p>
-        <span class="inline-block text-sm uppercase font-semibold tracking-wider text-black/60 group-hover:text-black/90 transition">Visit ↗</span>
-      </a>
-      <!-- Placeholder for future project(s) -->
-      <div class="rounded-2xl border border-dashed border-black/10 flex items-center justify-center min-h-[180px] bg-black/2 text-black/30 text-lg font-semibold">
-        <span>Coming Soon</span>
-      </div>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="hero" class="py-32 px-10 max-w-7xl mx-auto">
+        <div class="hero-line"></div>
+        <h1 class="text-[120px] font-black leading-[0.9] tracking-tighter mb-10">BUILDING <br> DIGITAL <br> EXCELLENCE.</h1>
+        <p class="text-2xl text-gray-500 max-w-xl">I craft high-performance digital experiences, custom web tools, and professional plugins with pixel-perfect precision.</p>
+    </section>
 
-  <!-- Advanced Tool-Kit -->
-  <section id="toolkit" class="px-6 py-12 md:py-16 bg-white w-full border-t border-black/10">
-    <h2 class="text-4xl md:text-5xl font-extrabold mb-10">Advanced Tool-Kit</h2>
-    <div class="grid gap-8 md:grid-cols-2">
-      <!-- Instagram Caption Generator -->
-      <a href="https://nexovent.tech/tools/instagram-caption-generator" target="_blank" rel="noopener" class="group block rounded-2xl border border-black/10 p-8 transition hover:scale-[1.024] hover:shadow-2xl hover:border-black/30 bg-white cursor-pointer">
-        <h3 class="text-xl font-bold mb-2 group-hover:underline">Instagram Caption Generator</h3>
-        <p class="text-black/70 mb-3">AI-powered generator for captivating, context-aware Instagram captions. Supercharge social storytelling with smart automation and creativity.</p>
-        <span class="inline-block text-sm uppercase font-semibold tracking-wider text-black/60 group-hover:text-black/90 transition">Try Tool ↗</span>
-      </a>
-      <!-- AI Prompt Studio -->
-      <a href="https://nexovent.tech/ai-studio" target="_blank" rel="noopener" class="group block rounded-2xl border border-black/10 p-8 transition hover:scale-[1.024] hover:shadow-2xl hover:border-black/30 bg-white cursor-pointer">
-        <h3 class="text-xl font-bold mb-2 group-hover:underline">AI Prompt Studio</h3>
-        <p class="text-black/70 mb-3">A sandbox for crafting, refining, and testing AI prompts—fueling smarter automation and creative solutions for next-gen products.</p>
-        <span class="inline-block text-sm uppercase font-semibold tracking-wider text-black/60 group-hover:text-black/90 transition">Explore Studio ↗</span>
-      </a>
-    </div>
-  </section>
+    <!-- Websites Section -->
+    <section id="websites" class="py-32 bg-gray-50 px-10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-sm font-bold uppercase tracking-[0.5em] text-gray-400 mb-16">Selected Web Projects</h2>
+            <div class="card-shadow p-16 bg-white rounded-3xl">
+                <h3 class="text-6xl font-black mb-8">Nexovent Tech</h3>
+                <p class="text-xl text-gray-600 mb-12 max-w-2xl">A professional-grade web architecture designed for scalability and high-traffic performance. This is the cornerstone of my development portfolio.</p>
+                <a href="https://nexovent.tech/" target="_blank" class="inline-block bg-black text-white px-10 py-5 font-bold uppercase tracking-widest hover:bg-blue-600 transition">Visit Masterpiece</a>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer / Connectivity -->
-  <footer id="contact" class="mt-auto bg-white border-t border-black/10 pt-10 pb-6 px-6">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 max-w-5xl mx-auto">
-      <div>
-        <span class="text-lg md:text-xl font-extrabold tracking-wider uppercase">Connectivity</span>
-      </div>
-      <div class="flex gap-6 text-lg">
-        <a href="https://x.com/ashishvail" aria-label="X (Twitter)" target="_blank" rel="noopener" class="hover:underline hover:text-black font-semibold transition">X</a>
-        <a href="https://www.linkedin.com/in/ashish-kumar84" aria-label="LinkedIn" target="_blank" rel="noopener" class="hover:underline hover:text-black font-semibold transition">LinkedIn</a>
-        <a href="https://github.com/ashishvail" aria-label="GitHub" target="_blank" rel="noopener" class="hover:underline hover:text-black font-semibold transition">GitHub</a>
-        <a href="https://github.com/ashishvail/ashish-portfolio" aria-label="Portfolio Repository" target="_blank" rel="noopener" class="hover:underline hover:text-black font-semibold transition">Repository</a>
-      </div>
-    </div>
-    <div class="mt-6 text-black/40 text-xs text-center select-none">© 2026 ASHISH. Designed & crafted for a new digital frontier.</div>
-  </footer>
+    <!-- Tools Section -->
+    <section id="tools" class="py-32 px-10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-sm font-bold uppercase tracking-[0.5em] text-gray-400 mb-16">Specialized Tool-Kit</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="card-shadow p-12 rounded-3xl">
+                    <h4 class="text-4xl font-bold mb-6">Instagram Caption Generator</h4>
+                    <p class="text-gray-500 mb-8">High-engagement social media content generation tool.</p>
+                    <a href="https://nexovent.tech/tools/instagram-caption-generator" target="_blank" class="font-bold border-b-2 border-black hover:text-blue-600 hover:border-blue-600">Explore Tool →</a>
+                </div>
+                <div class="card-shadow p-12 rounded-3xl">
+                    <h4 class="text-4xl font-bold mb-6">AI Prompt Studio</h4>
+                    <p class="text-gray-500 mb-8">Professional grade AI prompting engine for creative workflows.</p>
+                    <a href="https://nexovent.tech/ai-studio" target="_blank" class="font-bold border-b-2 border-black hover:text-blue-600 hover:border-blue-600">Explore Tool →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacts -->
+    <footer id="contact" class="py-32 px-10 bg-black text-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-20">
+            <div>
+                <h3 class="text-5xl font-black mb-10">Let's Talk.</h3>
+                <p class="text-gray-400">Ready to build your next big project? Reach out to me on social media or check my code repositories.</p>
+            </div>
+            <div class="space-y-6 text-sm font-bold uppercase tracking-widest">
+                <a href="https://x.com/ashishvail" class="block hover:text-blue-400">Twitter (X)</a>
+                <a href="https://www.linkedin.com/in/ashish-kumar84" class="block hover:text-blue-400">LinkedIn</a>
+                <a href="https://github.com/ashishvail" class="block hover:text-blue-400">GitHub Profile</a>
+                <a href="https://github.com/ashishvail/ashish-portfolio" class="block hover:text-blue-400">About this Repository</a>
+            </div>
+            <div class="text-gray-500 text-xs">
+                © 2026 ASHISH. <br>
+                DESIGNED FOR EXCELLENCE. <br>
+                ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
