@@ -1,293 +1,309 @@
-
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASHISH | Senior Full-Stack Architect & Automation Master</title>
-    
-    <!-- Scripts & Fonts -->
+    <title>ASHISH | Web Architect & Automation Expert</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
-        :root { --primary: #4f46e5; --accent: #0ea5e9; --bg-main: #ffffff; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg-main); color: #1e293b; overflow-x: hidden; }
+        :root { --accent: #4f46e5; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #000; overflow-x: hidden; }
+        .syne { font-family: 'Syne', sans-serif; }
         
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f5f9; }
-        ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 10px; }
-
-        /* Advanced UI Elements */
-        .glass-nav { backdrop-filter: blur(20px); background: rgba(255, 255, 255, 0.85); border-bottom: 1px solid #f1f5f9; }
-        .hero-title { font-size: clamp(3rem, 12vw, 10rem); line-height: 0.85; font-weight: 800; letter-spacing: -0.05em; }
-        .gradient-text { background: linear-gradient(135deg, #4f46e5 0%, #0ea5e9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        /* Original Fashion UI Elements */
+        .marquee { white-space: nowrap; overflow: hidden; background: #000; color: #fff; padding: 15px 0; }
+        .marquee-content { display: inline-block; animation: marquee 20s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         
-        /* Animations */
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
-        .animate-float { animation: float 6s ease-in-out infinite; }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-
-        /* Portfolio Cards */
-        .project-card { position: relative; border-radius: 50px; overflow: hidden; background: #f8fafc; border: 1px solid #f1f5f9; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        .project-card:hover { transform: translateY(-15px); border-color: #4f46e5; box-shadow: 0 40px 80px -20px rgba(79, 70, 229, 0.15); }
+        .hero-big-text { font-size: clamp(4rem, 15vw, 12rem); line-height: 0.8; font-weight: 800; text-transform: uppercase; letter-spacing: -0.05em; }
+        .reveal-img { clip-path: inset(0 0 100% 0); transition: clip-path 1s cubic-bezier(0.7, 0, 0.3, 1); }
+        .reveal-img.active { clip-path: inset(0 0 0 0); }
         
-        /* Social Buttons */
-        .social-circle { width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 20px; background: #f1f5f9; color: #1e293b; transition: 0.4s; border: 1px solid #e2e8f0; }
-        .social-circle:hover { background: #4f46e5; color: white; transform: rotate(10deg) scale(1.1); }
+        .border-fashion { border: 1px solid #e5e7eb; transition: all 0.4s ease; }
+        .border-fashion:hover { border-color: #000; background: #f9fafb; }
+        
+        .social-link { font-size: 1.2rem; transition: 0.3s; padding: 12px; border: 1px solid #eee; border-radius: 50%; width: 50px; height: 50px; display: flex; items-center; justify-content: center; }
+        .social-link:hover { background: #000; color: #fff; border-color: #000; }
 
-        /* Tech Badges */
-        .tech-badge { padding: 10px 20px; border-radius: 12px; background: #ffffff; border: 1px solid #e2e8f0; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; transition: 0.3s; }
-        .tech-badge:hover { border-color: #4f46e5; color: #4f46e5; transform: translateY(-3px); }
+        .sticky-nav { backdrop-filter: blur(10px); background: rgba(255,255,255,0.8); border-bottom: 1px solid #eee; }
+        .btn-black { background: #000; color: #fff; padding: 18px 40px; border-radius: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; transition: 0.3s; }
+        .btn-black:hover { opacity: 0.8; transform: translateY(-3px); }
     </style>
 </head>
 <body>
 
-    <!-- 1. NAVIGATION -->
-    <nav class="fixed w-full z-[100] glass-nav py-6 px-10 flex justify-between items-center">
-        <div class="text-3xl font-black italic tracking-tighter">ASHISH<span class="text-indigo-600">.</span></div>
-        <div class="hidden lg:flex space-x-12 text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">
-            <a href="#about" class="hover:text-indigo-600 transition">Identity</a>
-            <a href="#skills" class="hover:text-indigo-600 transition">Technology</a>
-            <a href="#portfolio" class="hover:text-indigo-600 transition">Infrastructure</a>
-            <a href="#workflow" class="hover:text-indigo-600 transition">Process</a>
+    <!-- STICKY HEADER -->
+    <nav class="fixed w-full z-[100] sticky-nav py-6 px-10 flex justify-between items-center">
+        <div class="syne text-2xl font-bold tracking-tighter">ASHISH<span class="text-indigo-600">.</span></div>
+        <div class="hidden md:flex gap-12 text-[10px] font-bold uppercase tracking-widest text-gray-500">
+            <a href="#about" class="hover:text-black">Identity</a>
+            <a href="#services" class="hover:text-black">Services</a>
+            <a href="#tech" class="hover:text-black">Stack</a>
+            <a href="#projects" class="hover:text-black">Projects</a>
+            <a href="#contact" class="hover:text-black">Contact</a>
         </div>
         <div class="flex gap-4">
-            <a href="https://github.com/ashishvail" target="_blank" class="social-circle"><i class="fab fa-github text-xl"></i></a>
-            <a href="https://www.linkedin.com/in/ashish-kumar84" target="_blank" class="social-circle"><i class="fab fa-linkedin-in text-xl"></i></a>
+            <a href="https://github.com/ashishvail" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ashish-kumar84" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
         </div>
     </nav>
 
-    <!-- 2. HERO SECTION -->
-    <section class="min-h-screen pt-40 px-10 flex flex-col justify-center relative overflow-hidden">
-        <div class="absolute top-20 right-[-10%] w-[500px] h-[500px] bg-indigo-50 rounded-full blur-[150px] -z-10"></div>
-        <div class="reveal active">
-            <div class="flex items-center gap-4 mb-10">
-                <span class="w-16 h-[2px] bg-indigo-600"></span>
-                <span class="text-xs font-black uppercase tracking-[0.5em] text-indigo-600">Digital Architect 2026</span>
-            </div>
-            <h1 class="hero-title mb-12">
-                ENGINEERING <br>
-                <span class="gradient-text italic">AUTONOMOUS</span> <br>
-                FUTURES.
-            </h1>
-            <div class="grid lg:grid-cols-2 gap-20 items-end">
-                <p class="text-2xl text-slate-400 font-medium leading-relaxed max-w-xl">
-                    Full-Stack professional specialized in building high-fidelity web applications, AI-driven automation, and scalable SEO infrastructures.
+    <!-- HERO SECTION (MASSIVE) -->
+    <section class="min-h-screen flex flex-col justify-center pt-32 px-10">
+        <div class="mb-10 flex items-center gap-4">
+            <span class="w-12 h-px bg-black"></span>
+            <span class="text-xs font-bold uppercase tracking-widest">Available for 2026 Projects</span>
+        </div>
+        
+        <h1 class="hero-big-text syne">
+            DIGITAL<br>ARCHITECT<br><span class="text-indigo-600">&</span> ENGINEER.
+        </h1>
+
+        <div class="grid lg:grid-cols-12 gap-10 mt-20 items-end">
+            <div class="lg:col-span-4">
+                <p class="text-xl text-gray-500 leading-relaxed font-medium">
+                    I build high-performance systems that blend aesthetic precision with technical excellence. Specialized in Web Development, SEO, and AI Automation.
                 </p>
-                <div class="flex flex-wrap gap-10 lg:justify-end">
-                    <div class="text-right">
-                        <p class="text-6xl font-black text-slate-900 leading-none">50+</p>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-4">Global Deployments</p>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-6xl font-black text-slate-900 leading-none">99%</p>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-4">System Accuracy</p>
-                    </div>
+            </div>
+            <div class="lg:col-span-8 flex flex-wrap gap-20 lg:justify-end">
+                <div class="text-right">
+                    <p class="text-7xl font-bold syne leading-none">185K+</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-4">Follower Impact</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-7xl font-bold syne leading-none">50+</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-4">Live Assets</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. IDENTITY SECTION (ABOUT) -->
-    <section id="about" class="py-40 px-10 bg-slate-50">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
-            <div class="reveal">
-                <div class="relative group">
-                    <div class="absolute inset-0 bg-indigo-600 rounded-[60px] rotate-6 group-hover:rotate-3 transition duration-500 -z-10"></div>
-                    <img src="1000097975.jpg" alt="Ashish Portfolio" class="w-full rounded-[60px] shadow-2xl grayscale hover:grayscale-0 transition duration-1000">
-                </div>
-            </div>
-            <div class="reveal">
-                <h2 class="text-xs font-black uppercase tracking-[0.5em] text-indigo-600 mb-8">The Philosophy</h2>
-                <h3 class="text-6xl font-black tracking-tighter mb-10 leading-none">Driven by logic. <br> Defined by result.</h3>
-                <div class="space-y-8 text-xl text-slate-500 font-medium leading-relaxed mb-12">
-                    <p>I am Ashish, a multi-skilled professional specializing in high-growth digital infrastructure. I turn complex ideas into scalable code, focusing on performance and automation.</p>
-                    <p>My expertise lies in the intersection of Web Architecture, SEO Strategy, and AI Automation logic. I don't just build websites; I build ecosystems that thrive.</p>
-                </div>
-                <div class="grid grid-cols-2 gap-8 border-t border-slate-200 pt-10">
-                    <div>
-                        <h4 class="font-black text-slate-900 uppercase text-xs tracking-widest mb-2 text-indigo-600">Founder</h4>
-                        <p class="text-sm font-bold">Nexovent Tech</p>
-                    </div>
-                    <div>
-                        <h4 class="font-black text-slate-900 uppercase text-xs tracking-widest mb-2 text-indigo-600">Expertise</h4>
-                        <p class="text-sm font-bold">AI Automation & SEO</p>
-                    </div>
-                </div>
-            </div>
+    <!-- RUNNING MARQUEE -->
+    <div class="marquee mt-20">
+        <div class="marquee-content syne font-bold uppercase text-2xl tracking-widest">
+            WEB DEVELOPMENT • SEO MASTERY • AI AUTOMATION • UI/UX ARCHITECTURE • NEXOVENT TECH • CONTENT STRATEGY • PYTHON LOGIC • REACT & NEXT.JS • WEB DEVELOPMENT • SEO MASTERY • AI AUTOMATION • UI/UX ARCHITECTURE • NEXOVENT TECH • CONTENT STRATEGY • PYTHON LOGIC • REACT & NEXT.JS •
         </div>
-    </section>
+    </div>
 
-    <!-- 4. TECH STACK (EXTENDED) -->
-    <section id="skills" class="py-40 px-10">
+    <!-- IDENTITY SECTION -->
+    <section id="about" class="py-40 px-10 bg-gray-50">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-24 reveal">
-                <h2 class="text-xs font-black uppercase tracking-[0.5em] text-indigo-600 mb-6">Technical Infrastructure</h2>
-                <h3 class="text-6xl font-black tracking-tighter">Mastered Tech Stack.</h3>
+            <div class="grid lg:grid-cols-2 gap-32 items-center">
+                <div class="relative">
+                    <img src="1000097975.jpg" alt="Ashish Portfolio" class="w-full rounded-none grayscale hover:grayscale-0 transition duration-700 shadow-2xl">
+                    <div class="absolute -bottom-10 -right-10 bg-black text-white p-12 hidden lg:block">
+                        <p class="syne text-4xl font-bold italic leading-none">"Logic over<br>everything."</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="syne text-xs font-bold uppercase tracking-[0.5em] text-indigo-600 mb-10">01 / Who I Am</h2>
+                    <h3 class="syne text-6xl font-extrabold tracking-tighter mb-12">I'm Ashish, a Full-Stack Professional based in India.</h3>
+                    <div class="space-y-8 text-lg text-gray-500 leading-relaxed font-medium">
+                        <p>I specialize in building and managing high-growth digital assets. My work ranges from core site architecture to complex automation scripts that handle data at scale.</p>
+                        <p>Currently leading <strong>Nexovent</strong>, a brand dedicated to AI-driven web tools and high-level digital growth services. Every project I touch is engineered for peak performance and absolute SEO dominance.</p>
+                    </div>
+                    <div class="mt-16">
+                        <a href="#contact" class="btn-black inline-block">Work with me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXTENDED SERVICES SECTION (NEW & HUGE) -->
+    <section id="services" class="py-40 px-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-32">
+                <h2 class="syne text-xs font-bold uppercase tracking-[0.5em] text-indigo-600 mb-10">02 / What I Do</h2>
+                <h3 class="syne text-7xl font-extrabold tracking-tighter">Core Capabilities.</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200">
+                <div class="bg-white p-16 border-fashion">
+                    <div class="text-4xl mb-10 text-indigo-600"><i class="fas fa-code"></i></div>
+                    <h4 class="syne text-2xl font-bold mb-6 uppercase tracking-tighter">Web Architecture</h4>
+                    <p class="text-gray-400 font-medium">Building custom WordPress, Blogger, and Vercel deployments optimized for speed and conversion. 100% responsive and clean code.</p>
+                </div>
+                <div class="bg-white p-16 border-fashion">
+                    <div class="text-4xl mb-10 text-indigo-600"><i class="fas fa-search-dollar"></i></div>
+                    <h4 class="syne text-2xl font-bold mb-6 uppercase tracking-tighter">SEO Supremacy</h4>
+                    <p class="text-gray-400 font-medium">Strategic keyword research and on-page/off-page optimization to rank niche websites on the first page of search results.</p>
+                </div>
+                <div class="bg-white p-16 border-fashion">
+                    <div class="text-4xl mb-10 text-indigo-600"><i class="fas fa-robot"></i></div>
+                    <h4 class="syne text-2xl font-bold mb-6 uppercase tracking-tighter">AI Automation</h4>
+                    <p class="text-gray-400 font-medium">Leveraging Python and custom scripts to automate content generation, social media management, and data scraping.</p>
+                </div>
+                <div class="bg-white p-16 border-fashion">
+                    <div class="text-4xl mb-10 text-indigo-600"><i class="fas fa-pen-nib"></i></div>
+                    <h4 class="syne text-2xl font-bold mb-6 uppercase tracking-tighter">Content Strategy</h4>
+                    <p class="text-gray-400 font-medium">High-converting copy and professional brand storytelling across multiple digital personas and platforms.</p>
+                </div>
+                <div class="bg-white p-16 border-fashion">
+                    <div class="text-4xl mb-10 text-indigo-600"><i class="fas fa-chart-line"></i></div>
+                    <h4 class="syne text-2xl font-bold mb-6 uppercase tracking-tighter">Digital Growth</h4>
+                    <p class="text-gray-400 font-medium">Managing large-scale social media assets with hundreds of thousands of followers for maximum engagement and ROI.</p>
+                </div>
+                <div class="bg-white p-16 border-fashion">
+                    <div class="text-4xl mb-10 text-indigo-600"><i class="fas fa-store"></i></div>
+                    <h4 class="syne text-2xl font-bold mb-6 uppercase tracking-tighter">Monetization Logic</h4>
+                    <p class="text-gray-400 font-medium">Expertise in POD (Redbubble, Zazzle) and Amazon KDP self-publishing models to build passive income streams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH STACK ANALYSIS -->
+    <section id="tech" class="py-40 px-10 bg-black text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-20">
+                <div class="lg:col-span-5">
+                    <h2 class="syne text-xs font-bold uppercase tracking-[0.5em] text-indigo-400 mb-10">03 / Tech Stack</h2>
+                    <h3 class="syne text-6xl font-extrabold tracking-tighter mb-10">The Engineering Behind the Brand.</h3>
+                    <p class="text-gray-500 text-lg leading-relaxed">I utilize a diverse set of modern technologies to deliver high-fidelity results. Every tool is chosen for its efficiency and reliability.</p>
+                </div>
+                <div class="lg:col-span-7 grid grid-cols-2 gap-10">
+                    <div>
+                        <h5 class="syne text-indigo-400 font-bold uppercase text-xs mb-6 tracking-widest">Frontend</h5>
+                        <ul class="space-y-4 font-bold text-xl uppercase">
+                            <li>HTML5 / CSS3</li>
+                            <li>Tailwind CSS</li>
+                            <li>React.js</li>
+                            <li>Next.js</li>
+                            <li>JavaScript (ES6+)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="syne text-indigo-400 font-bold uppercase text-xs mb-6 tracking-widest">Backend & Tools</h5>
+                        <ul class="space-y-4 font-bold text-xl uppercase">
+                            <li>Python Automation</li>
+                            <li>Node.js</li>
+                            <li>Git & GitHub</li>
+                            <li>Vercel / Firebase</li>
+                            <li>SEO Tools (Ahrefs/Semrush)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MASSIVE PROJECTS SECTION -->
+    <section id="projects" class="py-40 px-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-32 gap-10">
+                <div>
+                    <h2 class="syne text-xs font-bold uppercase tracking-[0.5em] text-indigo-600 mb-10">04 / Portfolio</h2>
+                    <h3 class="syne text-7xl font-extrabold tracking-tighter">Infrastructure Projects.</h3>
+                </div>
+                <div class="text-right">
+                    <p class="text-gray-400 font-bold text-xs uppercase tracking-widest">Scroll to explore</p>
+                </div>
+            </div>
+
+            <!-- Project Card 1 -->
+            <div class="group py-24 border-t border-gray-100 grid lg:grid-cols-12 gap-20 items-center">
+                <div class="lg:col-span-1 text-gray-300 syne text-4xl font-bold italic">01</div>
+                <div class="lg:col-span-6">
+                    <h4 class="syne text-6xl font-extrabold tracking-tighter mb-8 group-hover:text-indigo-600 transition">NEXOVENT.TECH</h4>
+                    <p class="text-xl text-gray-500 leading-relaxed font-medium mb-10">An all-in-one AI automation brand launched in 2026. This platform hosts various web tools designed to streamline content creation and digital growth analytics.</p>
+                    <div class="flex gap-4">
+                        <span class="text-[10px] font-bold border border-gray-200 px-4 py-2 uppercase tracking-widest">Full-Stack</span>
+                        <span class="text-[10px] font-bold border border-gray-200 px-4 py-2 uppercase tracking-widest">AI Engine</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative overflow-hidden">
+                    <div class="aspect-video bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-external-link-alt text-4xl text-gray-300 group-hover:text-indigo-600 group-hover:scale-125 transition duration-500"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="group py-24 border-t border-gray-100 grid lg:grid-cols-12 gap-20 items-center">
+                <div class="lg:col-span-1 text-gray-300 syne text-4xl font-bold italic">02</div>
+                <div class="lg:col-span-6">
+                    <h4 class="syne text-6xl font-extrabold tracking-tighter mb-8 group-hover:text-indigo-600 transition">EARNGUIDE.IN</h4>
+                    <p class="text-xl text-gray-500 leading-relaxed font-medium mb-10">A specialized niche website focusing on digital monetization and passive income strategies. Highly optimized for search engines with high-quality authority content.</p>
+                    <div class="flex gap-4">
+                        <span class="text-[10px] font-bold border border-gray-200 px-4 py-2 uppercase tracking-widest">SEO Strategy</span>
+                        <span class="text-[10px] font-bold border border-gray-200 px-4 py-2 uppercase tracking-widest">Blogger Mastery</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative overflow-hidden">
+                    <div class="aspect-video bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-4xl text-gray-300 group-hover:text-indigo-600 group-hover:scale-125 transition duration-500"></i>
+                    </div>
+                </div>
             </div>
             
-            <div class="flex flex-wrap justify-center gap-4 mb-24 reveal">
-                <span class="tech-badge">HTML5</span><span class="tech-badge">CSS3</span>
-                <span class="tech-badge">JavaScript</span><span class="tech-badge">Node.js</span>
-                <span class="tech-badge">Python</span><span class="tech-badge">Next.js</span>
-                <span class="tech-badge">React</span><span class="tech-badge">Tailwind</span>
-                <span class="tech-badge">SQL</span><span class="tech-badge">MongoDB</span>
-                <span class="tech-badge">Git</span><span class="tech-badge">AI Integration</span>
-                <span class="tech-badge">SEO Mastery</span><span class="tech-badge">Selenium</span>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 reveal">
-                <div class="p-12 rounded-[50px] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:border-indigo-100 transition duration-500">
-                    <i class="fas fa-layer-group text-4xl text-indigo-600 mb-8"></i>
-                    <h4 class="text-2xl font-black mb-6">Frontend Engineering</h4>
-                    <p class="text-slate-400 font-medium leading-relaxed">Developing pixel-perfect, high-performance user interfaces using React, Next.js and Tailwind CSS.</p>
-                </div>
-                <div class="p-12 rounded-[50px] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:border-indigo-100 transition duration-500">
-                    <i class="fas fa-server text-4xl text-sky-500 mb-8"></i>
-                    <h4 class="text-2xl font-black mb-6">Backend Architecture</h4>
-                    <p class="text-slate-400 font-medium leading-relaxed">Building robust, secure server-side systems and APIs with Node.js and Python for global scalability.</p>
-                </div>
-                <div class="p-12 rounded-[50px] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:border-indigo-100 transition duration-500">
-                    <i class="fas fa-robot text-4xl text-purple-500 mb-8"></i>
-                    <h4 class="text-2xl font-black mb-6">AI & Automation</h4>
-                    <p class="text-slate-400 font-medium leading-relaxed">Implementing custom AI logic and automation scripts to optimize digital workflows and growth.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. PORTFOLIO (MASIVE) -->
-    <section id="portfolio" class="py-40 px-10 bg-slate-900 text-white rounded-[100px_100px_0_0]">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-32 reveal">
-                <h2 class="text-xs font-black uppercase tracking-[0.5em] text-indigo-400 mb-6">Portfolio</h2>
-                <h3 class="text-7xl font-black tracking-tighter">Featured Works.</h3>
-            </div>
-
-            <div class="grid gap-40">
-                <!-- Project 1 -->
-                <div class="group grid lg:grid-cols-2 gap-20 items-center reveal">
-                    <div class="project-card aspect-video flex items-center justify-center bg-slate-800">
-                        <span class="text-8xl font-black text-slate-700 group-hover:text-indigo-600 transition duration-700">NEXOVENT</span>
-                    </div>
-                    <div>
-                        <div class="flex gap-4 mb-8">
-                            <span class="text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 border border-slate-700 rounded-full">Web App</span>
-                            <span class="text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 border border-slate-700 rounded-full">AI Logic</span>
-                        </div>
-                        <h4 class="text-5xl font-black mb-8 italic">Nexovent Tech Infrastructure</h4>
-                        <p class="text-slate-400 text-xl leading-relaxed mb-10">A professional platform built for digital automation. Featured tools like YT Idea Gen and high-ranking SEO modules. Launched 2026.</p>
-                        <a href="https://nexovent.tech/" target="_blank" class="inline-block bg-white text-slate-900 px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-indigo-600 hover:text-white transition duration-300">View Infrastructure ↗</a>
+            <!-- Project Card 3 (New - KDP) -->
+            <div class="group py-24 border-t border-b border-gray-100 grid lg:grid-cols-12 gap-20 items-center">
+                <div class="lg:col-span-1 text-gray-300 syne text-4xl font-bold italic">03</div>
+                <div class="lg:col-span-6">
+                    <h4 class="syne text-6xl font-extrabold tracking-tighter mb-8 group-hover:text-indigo-600 transition">KDP PUBLISHING</h4>
+                    <p class="text-xl text-gray-500 leading-relaxed font-medium mb-10">Self-publishing infrastructure for digital assets. Successfully launched a 120-page professional diary on Amazon KDP, managing everything from design to royalty optimization.</p>
+                    <div class="flex gap-4">
+                        <span class="text-[10px] font-bold border border-gray-200 px-4 py-2 uppercase tracking-widest">Product Design</span>
+                        <span class="text-[10px] font-bold border border-gray-200 px-4 py-2 uppercase tracking-widest">KDP Expert</span>
                     </div>
                 </div>
-
-                <!-- Project 2 -->
-                <div class="group grid lg:grid-cols-2 gap-20 items-center reveal">
-                    <div class="lg:order-2 project-card aspect-video flex items-center justify-center bg-indigo-600">
-                        <span class="text-8xl font-black text-indigo-400 group-hover:text-white transition duration-700 italic">STUDIO</span>
-                    </div>
-                    <div class="lg:order-1 lg:text-right">
-                        <div class="flex gap-4 mb-8 lg:justify-end">
-                            <span class="text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 border border-slate-700 rounded-full">Automation</span>
-                            <span class="text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 border border-slate-700 rounded-full">Python</span>
-                        </div>
-                        <h4 class="text-5xl font-black mb-8 italic">Prompt Studio AI</h4>
-                        <p class="text-slate-400 text-xl leading-relaxed mb-10">Advanced prompt engineering engine built with Python and GPT-4 logic to automate content creation for niche markets.</p>
-                        <a href="https://nexovent.tech/ai-studio" target="_blank" class="inline-block bg-white text-slate-900 px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-indigo-600 hover:text-white transition duration-300">Open Studio ↗</a>
+                <div class="lg:col-span-5 relative overflow-hidden">
+                    <div class="aspect-video bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-book-open text-4xl text-gray-300 group-hover:text-indigo-600 group-hover:scale-125 transition duration-500"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. WORKFLOW & STATISTICS -->
-    <section id="workflow" class="py-40 px-10 bg-white">
+    <!-- BIG CONTACT & FOOTER SECTION -->
+    <footer id="contact" class="pt-60 pb-20 px-10">
         <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-32 items-start reveal">
-                <div>
-                    <h2 class="text-xs font-black uppercase tracking-[0.5em] text-indigo-600 mb-8">The Workflow</h2>
-                    <h3 class="text-6xl font-black tracking-tighter leading-none mb-12">Precise process. <br> Efficient delivery.</h3>
-                    <p class="text-xl text-slate-400 leading-relaxed max-w-lg mb-12">Every deployment follows a strict methodological approach to ensure stability and growth.</p>
-                </div>
-                <div class="space-y-16">
-                    <div class="flex gap-10">
-                        <div class="text-4xl font-black text-indigo-100 italic leading-none">01</div>
-                        <div>
-                            <h5 class="text-2xl font-black mb-4">Architecture Design</h5>
-                            <p class="text-slate-400 font-medium">Drafting the logic flow and database schema for high-load systems.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-10">
-                        <div class="text-4xl font-black text-indigo-100 italic leading-none">02</div>
-                        <div>
-                            <h5 class="text-2xl font-black mb-4">Development & SEO</h5>
-                            <p class="text-slate-400 font-medium">Writing clean code while optimizing for core search engine visibility.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-10">
-                        <div class="text-4xl font-black text-indigo-100 italic leading-none">03</div>
-                        <div>
-                            <h5 class="text-2xl font-black mb-4">Automation & Launch</h5>
-                            <p class="text-slate-400 font-medium">Integrating AI tools and final deployment to scalable servers.</p>
-                        </div>
+            <div class="grid lg:grid-cols-12 gap-20 mb-60">
+                <div class="lg:col-span-7">
+                    <h2 class="syne text-xs font-bold uppercase tracking-[0.5em] text-indigo-600 mb-10">05 / Contact</h2>
+                    <h3 class="syne text-[8vw] font-extrabold tracking-tighter leading-none mb-20">BUILD THE<br>NEXT GEN<br>TOGETHER.</h3>
+                    <div class="flex flex-wrap gap-12">
+                        <a href="https://www.linkedin.com/in/ashish-kumar84" target="_blank" class="syne text-4xl font-bold border-b-4 border-black pb-4 hover:text-indigo-600 hover:border-indigo-600 transition">LinkedIn ↗</a>
+                        <a href="https://github.com/ashishvail" target="_blank" class="syne text-4xl font-bold border-b-4 border-black pb-4 hover:text-indigo-600 hover:border-indigo-600 transition">GitHub ↗</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. FOOTER SECTION -->
-    <footer class="pt-60 pb-20 px-10 border-t border-slate-100">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row justify-between items-start gap-32 mb-40 reveal">
-                <div class="max-w-xl">
-                    <div class="text-6xl font-black italic tracking-tighter mb-12">ASHISH<span class="text-indigo-600">.</span></div>
-                    <p class="text-3xl text-slate-400 font-medium leading-relaxed">Let's build the future of <span class="text-slate-900">autonomous digital systems</span> together.</p>
-                </div>
-                <div>
-                    <h5 class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-300 mb-12">Professional Hub</h5>
-                    <div class="flex flex-col gap-10">
-                        <a href="https://www.linkedin.com/in/ashish-kumar84" target="_blank" class="text-5xl md:text-7xl font-black text-slate-900 hover:text-indigo-600 transition-all underline decoration-indigo-50 underline-offset-[20px]">LinkedIn ↗</a>
-                        <a href="https://github.com/ashishvail" target="_blank" class="text-5xl md:text-7xl font-black text-slate-900 hover:text-indigo-600 transition-all underline decoration-indigo-50 underline-offset-[20px]">GitHub ↗</a>
+                <div class="lg:col-span-5 flex flex-col justify-end">
+                    <p class="text-gray-400 font-bold text-xs uppercase tracking-[0.3em] mb-8 italic">Based in Uttar Pradesh, India • Working Worldwide</p>
+                    <div class="bg-gray-50 p-12">
+                        <p class="text-2xl font-medium leading-relaxed">"Currently open for freelance partnerships, technical consulting, and high-level digital growth projects."</p>
                     </div>
                 </div>
             </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-center gap-10 pt-16 border-t border-slate-100 reveal">
-                <div class="flex items-center gap-10">
+            <div class="flex flex-col md:flex-row justify-between items-center pt-20 border-t border-gray-100">
+                <div class="syne font-bold text-xl uppercase tracking-tighter mb-8 md:mb-0">ASHISH<span class="text-indigo-600">.</span></div>
+                <div class="flex gap-10 text-[10px] font-bold uppercase tracking-widest text-gray-400">
                     <div class="flex items-center gap-3">
-                        <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
-                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-400">Available for Work</span>
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        Status: Active 2026
                     </div>
-                    <span class="text-[10px] font-black uppercase tracking-widest text-slate-300 italic">© 2026 Ashish Systems. All Rights Reserved.</span>
-                </div>
-                <div class="flex gap-10 text-[9px] font-black uppercase tracking-[0.4em] text-slate-400">
-                    <span>Performance</span>
-                    <span>Scalability</span>
-                    <span>Logic</span>
+                    <span>© All Rights Reserved</span>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Reveal Scroll Script -->
+    <!-- SCROLL ANIMATION SCRIPT -->
     <script>
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.reveal-img');
+            elements.forEach(el => {
+                const position = el.getBoundingClientRect().top;
+                if(position < window.innerHeight - 100) {
+                    el.classList.add('active');
                 }
-            }
-        }
-        window.addEventListener("scroll", reveal);
+            });
+        });
     </script>
 
 </body>
